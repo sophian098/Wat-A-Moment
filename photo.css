@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+body {
+    background-color:#FAEBCD;
+    font-family: serif;
+}
+
+/*style for title*/
+h1 {
+    color: #434343;
+    font-size: 300%;
+    text-align: center;
+    font-family: "Titan One";
+}
+
+/*style for all buttons*/
+button{
+    background-color: #F7C873
+}
+
+.button-text, .button-text-2{
+    font-family: "Squada One";
+}
+
+/* Style for the main page container */
+.features-page {
+    display: flex; /* Use flexbox for side-by-side layout */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    height:100vh; /* Make sure it takes up the full viewport height */
+    width:100%;
+    text-align: center;
+    border:solid;
+}
+
+/* Sidebar styling */
+.features-side-bar {
+    border: solid;
+    text-align: center;
+    margin-right: 20px; /* Space between sidebar and camera screen */
+    height: 100%; /* Make sure it takes the full height of the page */
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    justify-content: space-evenly; /* Distribute buttons evenly */
+}
+
+/* Button styling */
+.button {
+    width: 100%; /* 100% of the container (features-side-bar) */
+    height: 100%; /* Make the button take the full height */
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* Camera screen styling */
+.camera-screen {
+    border: solid;
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    width: 50%; /* Take up 50% of the page width */
+    height: 100%; /* Take up the full height */
+}
+
+/* Camera image styling */
+#user-camera {
+    width: 100%; /* 100% of the camera-screen container */
+    height: 100%; /* 100% of the camera-screen container */
+    object-fit: cover; /* Ensure the image maintains its aspect ratio */
+}
