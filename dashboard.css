@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+body {
+    background-color:#FAEBCD;
+    font-family: serif;
+}
+
+/*style for title*/
+h1 {
+    color: #434343;
+    font-size: 300%;
+    text-align: center;
+    font-family: "Titan One";
+}
+
+/*style for all buttons*/
+button{
+    background-color: #F7C873
+}
+
+.button-text, .button-text-2{
+    font-family: "Squada One";
+}
+
+/*style for first set of buttons*/
+.choices{
+    display: flex; /*displays side-by-side*/
+    justify-content: space-between;
+    border:solid;
+    margin: 10% 10%;
+}
+
+.button{
+    height:100px;
+    width:150px;
+    border-radius:25%/50%;
+}
+
+/*style for second set of buttons*/
+
+.other-choices{
+    display: flex; /*displays side-by-side*/
+    justify-content: space-between;
+    border:solid;
+    margin: 10% 10%;
+}
+
+.button-2{
+    border-radius:25%/50%;
+}
