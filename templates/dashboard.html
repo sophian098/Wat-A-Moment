@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wat-A-Moment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+  </head>
+
+  <body>
+    <h1 class="title">WAT-A-MOMENT</h1>
+
+    <div class="choices">
+
+        <div class="box" >
+            <a href="{{ url_for('photo') }}">
+                <button class ="button"  id="take-photo">
+                    <p class="button-text">TAKE A PHOTO</p>
+                </button>
+            </a>
+        </div>
+
+        <!-- wrap this up in a flex box that takes the code to another html page called view your photos -->
+        <div class="box" id="view-photo">
+            <a href="{{ url_for('viewyourphotos') }}">
+                <button class ="button">
+                    <p class="button-text">VIEW YOUR PHOTOS</p>
+                </button>
+            </a>
+        </div>
+
+
+        <!-- wrap this up in a flex box that takes the code to another html page called view your photos-->
+        <div class="box" id="class-photo">
+            <a href="{{ url_for('viewclassphotos') }}">
+                <button class ="button">
+                    <p class="button-text">VIEW CLASS PHOTOS</p>
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div class="other-choices">
+        <div class="box-2">
+            <button class ="button-2">
+                <p class="button-text-2">ADD CLASS</p>
+            </button>
+        </div>
+
+        <div class="box-2">
+            <form id="logout-form" action="/logout" method="POST">
+                <button class ="button-2">
+                    <p class="button-text-2">LOG OUT</p>
+                </button>
+            </form>
+
+            {% if message %}
+      <p style="color: red;">{{ message }}</p>
+      {% endif %}
+        </div>
+    </div>
+  </body>
+</html>

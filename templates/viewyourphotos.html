@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Photos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='viewyourphotos.css') }}">
+</head>
+<body>
+    <h1>Your Photos</h1>
+    
+    {% if error %}
+    <div class="error-message">{{ error }}</div>
+    {% endif %}
+
+    <div class="photo-grid">
+        {% if photos and photos|length > 0 %}
+            {% for photo in photos %}
+            <div class="polaroid">
+                <img src="{{ photo.photoURL }}" alt="User Photo" style="width:100%">
+                <div class="container">
+            </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p>No photos to display!</p>
+        {% endif %}
+    </div>
+
+    <a href="{{ url_for('dashboard') }}">
+        <button class="buttonHomepage">Back to Dashboard</button>
+    </a>
+</body>
+</html>
+

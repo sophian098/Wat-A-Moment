@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+
+body {
+    background-color: #FAEBCD;
+    font-family: serif;
+    margin: 0;
+    padding: 0;
+    color: #434343;
+}
+
+/* Title styling */
+h1 {
+    color: #434343;
+    font-size: 3.5rem;
+    text-align: center;
+    font-family: "Titan One", cursive;
+    margin: 1rem 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styling */
+button {
+    background-color: #F7C873;
+    border: none;
+    border-radius: 12px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.button-text {
+    font-family: "Squada One";
+    font-size: 1.2rem;
+    color: #434343;
+}
+
+/* Style for the main page container */
+.features-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+    gap: 3rem;
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+}
+
+/* Sidebar styling */
+.features-side-bar {
+    border: 2px solid #767676;
+    border-radius: 16px;
+    padding: 2rem;
+    height: 90vh;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 25%; /* Fix the width of sidebar */
+}
+
+/* Box for the buttons to make them more visually appealing */
+.features-side-bar-box {
+    border: 2px solid #434343;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.features-side-bar-box:hover {
+    background-color: #F7C873;
+}
+
+/* Camera screen styling */
+.camera-screen {
+    border: 2px solid #767676;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    max-width: 800px;
+    height: 80vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Ensure the camera image fits without shrinking */
+#user-camera {
+    width: 100%; /* Take full width of container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area without distortion */
+    border-radius: 10px;
+}
+
+/* Styling for the countdown section */
+#countdown-display {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #434343;
+}
+
+/* Styling for the homepage button */
+.buttonHomepage {
+    background-color: #F7A85C;
+    color: #434343;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    margin-top: 1rem; /* Add margin to separate from other elements */
+}
+
+/* Button hover effect */
+.buttonHomepage:hover {
+    background-color: #F7A85C;
+    transform: translateY(-5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .features-side-bar {
+        width: 100%; /* Sidebar takes full width on small screens */
+        height: auto; /* Sidebar height adjusts to content */
+    }
+
+    .camera-screen {
+        width: 90%; /* Camera screen takes 90% of the screen width on smaller screens */
+        height: 50vh;
+    }
+
+    .features-page {
+        flex-direction: column;
+        gap: 1rem; /* Smaller gap between elements */
+    }
+
+    .buttonHomepage {
+        width: 100%; /* Button takes full width */
+        padding: 15px 20px;
+    }
+}

@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+
+
+body {
+    background-color:#FAEBCD;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*style for title*/
+h1 {
+    color: #434343;
+    font-size: 3.3rem;
+    text-align: center;
+    font-family: "Titan One";
+    margin-top: 2rem;
+}
+
+/*style for all buttons*/
+button{
+    background-color: #F7C873;
+    border: none;
+    transition: transform 0.2s, background-color 0.3s;
+    color: #434343;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-text, .button-text-2{
+    font-family: "Squada One";
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/*style for first set of buttons*/
+.choices{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Adjust spacing to be more moderate */
+    align-items: center;
+    border: 3px solid #434343;
+    border-radius: 15px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    max-width: 80%;
+    gap: 1.5rem; /* Reduced gap between buttons */
+}
+
+.button{
+    height: 120px; /* Keep the buttons at a moderate size */
+    width: 160px; /* Moderate width */
+    border-radius: 25%/50%;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.1rem; /* Slightly larger font size */
+    margin: 1rem; /* Added a small margin between buttons */
+}
+
+/*style for second set of buttons*/
+.other-choices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 60%;
+    border: 3px solid #434343;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.button-2{
+    border-radius: 25px;
+    padding: 1rem 2rem;
+    min-width: 140px;
+    font-size: 1rem;
+}
+
+
+/* box styles for the button containers */
+.box, .box-2 {
+    text-align: center;
+}

@@ -1,0 +1,124 @@
+body {
+    background-color: #FAEBCD;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+h1 {
+    color: #434343;
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 40px 0;
+    font-weight: bold;
+
+}
+
+h3 {
+    color: #434343;
+}
+
+.buttonLogIn {
+    display:block;
+    margin: 10% auto;
+    justify-content: center;
+    background-color: #F7C873;
+    text-align: center;
+    padding: 10px 20px;
+    color: #434343;
+    font-size: 15px;
+    left: 400%;
+    border-radius: 5px;
+    border: none;
+}
+
+.logoImage {
+    display: block;
+    margin: 10% auto;
+}
+
+.emptyPhoto1 {
+    display: block;
+    max-width: 30%;
+    height: auto;
+    margin-right:auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+
+.polaroid {
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+.container {
+    padding: 10px;
+    background-color: #F7C873;
+    color: #434343;
+    font-size: 1rem;
+    font-weight: 600;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+
+.photo-grid{
+    display:flex;
+    flex-wrap: wrap; /*items can wrap onto new lines */
+    gap: 20px; /*adds space bw photos */
+    width: 80%;
+    background-color:#F8F8F8;
+    padding: 2%;
+
+}
+
+.buttonHomepage{
+    background-color: #F7C873;
+    color: #434343;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.polaroid img{
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #F7C873;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .photo-grid {
+        width: 95%;
+        padding: 5%;
+        gap: 10px;
+    }
+
+    .polaroid {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .buttonHomepage {
+        width: 100%;
+    }
+}

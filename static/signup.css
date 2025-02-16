@@ -1,0 +1,79 @@
+body{
+    background-color: #FAEBCD;
+    color: #434343;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-body{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+}
+
+.form-button{
+    padding:14px 20px;
+    margin:10px 0px;
+    width:100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ffedcd;
+    color: #434343;
+    transition: background-color 0.3s ease;
+}
+
+#submit-button{
+    background-color: #f6d8a5;
+    color: #434343;
+    width:150px;
+    padding: 14px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    transition: background-color 0.3 ease;
+}
+
+
+.buttonHomepage{
+    margin-top: 20px;
+    background-color: #F7C873;
+    color: #434343;
+    width:150px;
+    padding: 14px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+
+.entire-form{
+    padding:40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+h1.title{
+    font-size: 32px;
+    font-weight: bold;
+    color: #434343;
+    margin-bottom: 30px;
+}

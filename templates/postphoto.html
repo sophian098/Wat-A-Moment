@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Photo</title>
+    <link rel ="stylesheet" href ="{{ url_for('static', filename='post-photo.css') }}"/>
+</head>
+<body>
+    <h1>Wat-a-Moment</h1>
+<!-- Form to send data to Flask -->
+<form method="POST" action="{{ url_for('postphoto') }}">
+  <!-- Photo Grid -->
+  <div class="photo-grid">
+      {% for photo in photos %}
+      <div class="polaroid">
+          <!-- Hidden checkbox to detect clicks -->
+          <input type="checkbox" id="photo_{{ photo.id }}" name="selected_photos" value="{{ photo.id }}">
+          
+          <!-- Label makes the photo clickable -->
+          <label for="photo_{{ photo.id }}">
+            <p>{{ photo.url }}</p>
+              <img src="{{ photo.url }}" alt="Photo {{ loop.index }}" style="width:100%">
+          </label>
+          <div class="container">
+              <p>Photo {{ loop.index }}</p>
+          </div>
+      </div>
+      {% endfor %}
+  </div>
+    <!-- User Selection Dropdown with checkboxes -->
+    <label for="user-checkboxes"></label>
+    <div class="dropdown">
+        <button class="dropbtn">Send to users (Hover)</button>
+        <div class="dropdown-content">
+            {% for user in users %}
+                <label>
+                    <input type="checkbox" name="selected_users" value="{{ user['id'] }}">
+                    {{ user['username'] }}
+                </label><br>
+            {% endfor %}
+        </div>
+    </div>
+
+  <!-- Action Buttons -->
+  <div class="button-container">
+      <button type="submit" name="action" value="postToClass">Post to Class</button>
+      <button type="submit" name="action" value="sendToSelf">Send to Yourself</button>
+      <button type="submit" name="action" value="sendToUser">Send to Selected User</button>
+      <button type="submit" name="action" value="finish">Finish Photos</button>
+  </div>
+</form>
+</body>
+</html>
+
+
+</body>
+</html>

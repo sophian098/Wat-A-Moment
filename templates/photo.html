@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WAT-A-MOMENT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='photo.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  <!-- jQuery for AJAX -->
+</head>
+
+<body>
+    <h1 class="title">WAT-A-MOMENT</h1>
+    <div class="features-page">
+        <div class="features-side-bar">
+            <div class="features-side-bar-box">
+                <button class="button" id="feature-button-1">
+                    <p class="button-text">Photo 1: look cute!</p>
+                </button>
+            </div>
+
+            <div class="features-side-bar-box">
+                <button class="button" id="feature-button-2">
+                    <p class="button-text">Photo 2: silly face!</p>
+                </button>
+            </div>
+
+            <div class="features-side-bar-box">
+                <button class="button" id="feature-button-3">
+                    <p class="button-text">Photo 3: serious time :| </p>
+                </button>
+            </div>
+
+            <div class="features-side-bar-box">
+                <button class="button" id="feature-button-4">
+                    <p class="button-text">Photo 4: RANDOM!</p>
+                </button>
+            </div>
+        </div>
+
+        <div class="camera-screen">
+            <img src="static/photos/photo.jpg" alt="user-camera" id="user-camera">
+        </div>
+
+        <!-- Countdown Display -->
+        {% if countdown_active %}
+        <div id="countdown-display">
+            <p>Time remaining: <span id="countdown-timer">{{ seconds }}</span> seconds</p>
+        </div>
+        {% endif %}
+
+        <a href="{{ url_for('index')}}">
+            <button class="buttonHomepage">
+                Back to home page
+            </button>
+        </a>
+
+        <a href="{{ url_for('postphoto')}}">
+            <button class="buttonHomepage">
+                Click to continue on your photo journey!
+            </button>
+        </a>
+    </div>
+
+    {% if countdown_active %}
+    <script>
+        // Initialize countdown time
+        var countdownTime = 5;
+
+        // Function to update the countdown every second
+        function updateCountdown() {
+            if (countdownTime > 0) {
+                countdownTime--;  // Decrease the countdown time by 1
+                $("#countdown-timer").text(countdownTime);  // Update countdown display
+                setTimeout(updateCountdown, 1000);  // Call this function again after 1 second
+            } else {
+                // Countdown finished, hide countdown and do something else (optional)
+                $("#countdown-display").hide();
+            }
+        }
+
+        // Start updating countdown when page loads
+        $(document).ready(function() {
+            updateCountdown();
+        });
+    </script>
+    {% endif %}
+</body>
+
+</html>

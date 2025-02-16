@@ -1,0 +1,44 @@
+<html lang="en">
+  <head> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign up</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}">
+  </head>
+<body>
+
+<div class="entire-form">
+    <h1>Create an Account</h1>
+    <div class="form-body">
+      <form action="/signup" method="POST">
+          <input class="form-button"  type="text" name="fname" placeholder="First Name" required> <br>
+          <input class="form-button"  type="text" name="lname" placeholder="Last Name" required> <br>
+          <input class="form-button"  type="text" name="username" placeholder="Username" required> <br>
+          <input class="form-button" type="text" name="classCode" placeholder="Classroom code" required> <br>
+          <input class="form-button"  type="password" name="password" placeholder="Password" required> <br>
+          <input class="form-button" type="submit" value="Create account" id="submit-button">
+        </form>
+
+        {% if message %}
+        <p style="color: red;">{{ message }}</p>
+        {% endif %}
+
+      {# {% if %}#}
+          <a href="{{ url_for('dashboard')}}">
+          
+          </a>
+      {#{% endif %}#}
+
+    </div>
+
+    <a href="{{ url_for('index')}}">
+      <button class="buttonHomepage">
+      Back to home page
+      </button>
+    </a>
+
+</div>
+
+</body>
+</html>
+<!--This form is with html and flask-->

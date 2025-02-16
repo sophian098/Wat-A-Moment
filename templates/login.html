@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+  </head>
+</body>
+
+<div class="entire-form">
+    <h1>Log in</h1>
+    <div class="form-body">
+      <form action="/login" method="POST">
+          <input class="form-button" id="username" type="username" name="username" placeholder="Enter username" required> <br>
+         <input class="form-button" id="password" type="password" name="password" placeholder="Enter password" required> <br>
+         <input class="form-button" type="submit" value="Log in" id="submit-button">
+      </form> 
+      <!-- wrong stuff entered -->
+      {% if error %}
+      <p style="color: red;">{{ error }}</p>
+      {% endif %}
+    </div>
+
+    <a href="{{ url_for('index')}}">
+      <button class="buttonHomepage">
+      Back to home page
+      </button>
+    </a>
+
+</div>
+
+</body>
+</html>
+<!--This form is with html and flask-->
